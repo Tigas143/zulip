@@ -43,6 +43,8 @@ def get_topic_from_message_info(message_info: dict[str, Any]) -> str:
     """
     if "topic" in message_info:
         return message_info["topic"]
+    if "exact-topic" in message_info:
+        return message_info["topic"]
 
     return message_info["subject"]
 
